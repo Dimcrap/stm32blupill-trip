@@ -8,8 +8,8 @@ CFLAGS += -Iinclude
 
 #LDFLAGS = -T STM32F103C8Tx_FLASH.ld -nostdlib -lc -lgcc
 
-LDFLAGS = -T STM32F103C8Tx_FLASH.ld -specs=nosys.specs -specs=nano.specs
-
+LDFLAGS = -T STM32F103XB_FLASH.ld -specs=nosys.specs -specs=nano.specs
+#need some including path here  for stm32 headers and sources
 SRCS = src/main.c src/system_stm32f1xx.c src/startup_stm32f103.s
 
 all: $(TARGET).bin
